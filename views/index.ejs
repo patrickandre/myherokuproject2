@@ -1,14 +1,118 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <p>
-      <%= env %>
-    </p>
-  </body>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title><%= title %></title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<style>
+  @import url(https://fonts.googleapis.com/css?family=Oswald:700|Quattrocento);
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  min-height: 100%;
+  height: 100%;
+}
+
+body {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  color: #ececec;
+  font-family: Quattrocento, serif;
+  line-height: 1.8925;
+  background-image: url(https://images.unsplash.com/photo-1439723680580-bfd9d28ef9b6?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=1636880f0251ebc45d0c9492a28f4560);
+  background-size: cover;
+  background-position: center;
+}
+body:before, body:after {
+  content: '';
+  position: absolute;
+}
+body:before {
+  mix-blend-mode: overlay;
+  top: 2%;
+  right: 2%;
+  bottom: 2%;
+  left: 2%;
+  border: 1px solid #efefef;
+  z-index: 2;
+}
+body:after {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.6;
+  background: #1a1a1a;
+  background: -webkit-radial-gradient(top, circle, #cc774d, #1a1a1a);
+  background: radial-gradient(circle at top, #cc774d, #1a1a1a);
+}
+@media (max-height: 450px) {
+  body {
+    font-size: 10px;
+  }
+}
+
+.content {
+  position: relative;
+  max-width: 650px;
+  z-index: 1;
+  padding: 4%;
+  text-align: justify;
+}
+
+p {
+  position: relative;
+  padding: 1em 0;
+  letter-spacing: 1px;
+}
+p:before, p:after {
+  mix-blend-mode: difference;
+  content: "";
+  position: absolute;
+  left: calc(25% / 2);
+  width: 75%;
+  height: 1px;
+  background: #D4A790;
+}
+p:before {
+  top: 0;
+}
+p:after {
+  bottom: 0;
+}
+
+h1 {
+  margin-top: 0;
+  font-family: Oswald;
+  font-size: 3em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 1.125;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+</style>
+  
+</head>
+
+<body>
+  <div class="content">
+    <h1>There is a calmess in the <%= env %> environment</h1>
+    <p>Gathered by gravity quasar realm of the galaxies of brilliant syntheses. Hydrogen atoms a mote of dust suspended in a sunbeam. Culture galaxies great turbulent clouds? Star stuff harvesting star light. Worldlets a very small stage in a vast cosmic arena. Rogue consciousness, trillion tesseract Orion's sword, emerged into consciousness, how far away prime.</p>
+</div>
+  
+  
+</body>
 </html>
